@@ -1,0 +1,52 @@
+@use '../../styles/resets.scss';
+
+.tiers {
+    display: flex;
+    margin: 1rem;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__ranking {
+        display: flex;
+        background-color: red;
+        padding: 1rem 0.5rem;
+        font-size: 4rem;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+    }
+
+    &__subranking-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 0.15rem;
+        margin-left: .15rem;
+    }
+
+    &__subranking-row-container {
+        display: flex;
+    }
+
+    &__subranking {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;;
+        padding: 0.5rem;
+        width: 2rem;
+        margin-right: 0.5rem;
+        background-color: red;
+    }
+
+    &__row {
+        background-color: blue;
+
+    }
+}
