@@ -1,0 +1,41 @@
+@use '../../styles/resets.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #8adadc;
+
+    &__logo {
+        height: 2rem;
+
+    }
+
+    &__title {
+        font-size: 1rem;
+    }
+
+    &__form-field {
+        display: flex;
+        position: relative;
+
+    }
+
+    &__search {
+        display: flex;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+    }
+
+    &__button-icon {
+        height: 0.5rem;
+    }
+}
