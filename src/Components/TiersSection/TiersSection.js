@@ -1,5 +1,4 @@
 import './TiersSection.scss';
-import { Link } from 'react-router-dom'
 import Tier from '../Tier/Tier';
 
 function TiersSection() {

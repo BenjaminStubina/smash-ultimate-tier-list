@@ -1,4 +1,5 @@
 import './Tier.scss';
+import Row from '../Row/Row';
 
 function Tier({name, ranking, styling1, styling2}) {
 
@@ -14,25 +15,19 @@ function Tier({name, ranking, styling1, styling2}) {
                             <div className={styling2}>
                                 +
                             </div>
-                            <div className='tiers__row'>
-                                ROW 1
-                            </div>
+                            <Row name='S+' />
                         </div>
                         <div className='tiers__subranking-row-container'>
                             <div className={styling2}>
                                 o
                             </div>
-                            <div className='tiers__row'>
-                                ROW 2
-                            </div>
+                            <Row name='S' />
                         </div>
                         <div className='tiers__subranking-row-container'>
                             <div className={styling2}>
                                 -
                             </div>
-                            <div className='tiers__row'>
-                                ROW 3
-                            </div>
+                            <Row name='S-' />
                         </div>
                     </div>
                 </div>
@@ -52,17 +47,13 @@ function Tier({name, ranking, styling1, styling2}) {
                             <div className={styling2}>
                                 +
                             </div>
-                            <div className='tiers__row'>
-                                ROW 1
-                            </div>
+                            <Row name={`${ranking}+`} />
                         </div>
                         <div className='tiers__subranking-row-container'>
                             <div className={styling2}>
                                 -
                             </div>
-                            <div className='tiers__row'>
-                                ROW 2
-                            </div>
+                            <Row name={`${ranking}-`} />
                         </div>
                     </div>
                 </div>

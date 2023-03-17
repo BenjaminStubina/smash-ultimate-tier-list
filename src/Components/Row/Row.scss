@@ -1,0 +1,6 @@
+@use '../../styles/resets.scss';
+
+.row {
+    display: flex;
+    gap: 0.15rem;
+}
