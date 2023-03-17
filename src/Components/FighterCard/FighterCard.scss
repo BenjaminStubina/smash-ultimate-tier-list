@@ -1,0 +1,34 @@
+@use '../../styles/resets.scss';
+
+.fighter-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #000000b0;
+    backdrop-filter: blur(6px);
+    width: 30rem;
+    align-items: center;
+    color: white;
+    margin-right: 5rem;
+
+    &__portrait {
+        height: 15rem;
+        width: 15rem;
+        margin-top: 2rem;
+    }
+
+    &__ranking {
+        font-size: 6rem;
+        margin: 0.5rem 0;
+    }
+
+    &__name {
+        font-size: 4rem;
+        margin: 0.5rem 0;
+    }
+
+    &__moves, &__universe, &__debut-year {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+}

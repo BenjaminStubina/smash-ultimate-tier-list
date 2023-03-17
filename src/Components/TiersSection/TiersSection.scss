@@ -1,14 +1,19 @@
 @use '../../styles/resets.scss';
 @use '../../styles/variables.scss';
 
-.tiers {
+.main{
     background-image: url('../../assets/images/background.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tier-list {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     gap: 1rem;
-    width: 100%;
 }
