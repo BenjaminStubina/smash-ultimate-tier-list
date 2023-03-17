@@ -9,9 +9,11 @@
     width: 2.5rem;
     height: 2.5rem;
     background-color: $s-tier;
+    outline: 0px solid white;
+    transition: outline-width 0.3s linear;
 
     &:hover {
-        outline: 5px solid white;
+        outline-width: 5px;
     }
 
     // &:selected {
@@ -31,9 +33,11 @@
     width: 2.5rem;
     height: 2.5rem;
     background-color: $a-tier;
+    outline: 0px solid white;
+    transition: outline-width 0.3s linear;
 
     &:hover {
-        outline: 5px solid white;
+        outline-width: 5px;
     }
 
     &__icon {
@@ -49,9 +53,11 @@
     width: 2.5rem;
     height: 2.5rem;
     background-color: $b-tier;
+    outline: 0px solid white;
+    transition: outline-width 0.3s linear;
 
     &:hover {
-        outline: 5px solid white;
+        outline-width: 5px;
     }
 
     &__icon {
@@ -67,9 +73,11 @@
     width: 2.5rem;
     height: 2.5rem;
     background-color: $c-tier;
+    outline: 0px solid white;
+    transition: outline-width 0.3s linear;
 
     &:hover {
-        outline: 5px solid white;
+        outline-width: 5px;
     }
 
     &__icon {
@@ -85,9 +93,11 @@
     width: 2.5rem;
     height: 2.5rem;
     background-color: $d-tier;
+    outline: 0px solid white;
+    transition: outline-width 0.3s linear;
 
     &:hover {
-        outline: 5px solid white;
+        outline-width: 5px;
     }
 
     &__icon {
