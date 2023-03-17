@@ -1,0 +1,11 @@
+.footer {
+    display: flex;
+    padding: 1rem 2rem;
+    background-color: #8adadc;
+    gap: 2rem;
+
+    &__creator {
+    display: flex;
+    flex-direction: column;
+    }
+}

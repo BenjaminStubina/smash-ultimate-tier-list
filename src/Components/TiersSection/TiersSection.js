@@ -4,7 +4,7 @@ import FighterCard from '../FighterCard/FighterCard';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function TiersSection() {
+function TiersSection(search) {
 
     const [selectedFighter, setSelectedFighter] = useState("")
     const [fighterInfo, setFighterInfo] = useState("")
@@ -17,7 +17,6 @@ function TiersSection() {
         axios
         .get(`http://localhost:8080/characters/${selectedFighter.name}`)
         .then((res) => {
-            console.log(res.data);
             setFighterInfo(res.data);
         })
         .catch((error) => {
@@ -26,11 +25,32 @@ function TiersSection() {
         })
     },[selectedFighter])
 
+    useEffect(() => {
+        if (!search.search) {
+            return; 
+        }
+        axios
+        .get(`http://localhost:8080/characters/${search.search}`)
+        .then((res) => {
+            if (res.data.length === 0) {
+                console.log('Please enter proper Fighter name!')
+                setFighterInfo('')
+            }
+            else {
+                setFighterInfo(res.data);
+            }
+
+        })
+        .catch((error) => {
+            console.log(error);
+            console.log('error fetching fighter information');
+        })
+    },[search])
+
     function fetchFighters() {
         axios
             .get('http://localhost:8080/icons')
             .then((res) => {
-                console.log(res.data);
                 setFighters(res.data);
             })
             .catch((error) => {

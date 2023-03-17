@@ -4,30 +4,29 @@ import headerLogo from '../../assets/images/ultimateLogo.png';
 import buttonIcon from '../../assets/images/search.png';
 import { Link } from 'react-router-dom'
 
-function Header() {
+function Header({setSearch}) {
 
     const [searchInput, setSearchInput] = useState("");
 
     function handleChange(event) {
-        event.preventDefault();
         setSearchInput(event.target.value);
     }
 
     function handleSubmit(event) {
         event.preventDefault();
+        setSearch(searchInput);
+        setSearchInput("");
     }
 
     return (
         <section className='header'>
-            {/* <Link to='/'> */}
                 <img className='header__logo' src={headerLogo} alt='Smash Ultimate Logo' />
-            {/* </Link> */}
             <h1 className='header__title'>
                 SMASH ULTIMATE TIER LIST
             </h1>
-            <form className='header__form-field'>
+            <form onSubmit={handleSubmit} className='header__form-field'>
                 <input onChange={handleChange} className='header__search' type='text' placeholder='Search' value={searchInput} />
-                <button className='header__button' onSubmit={handleSubmit}>
+                <button className='header__button'>
                     <img className='header__button-icon' src={buttonIcon} alt='search icon' />
                 </button>
             </form>

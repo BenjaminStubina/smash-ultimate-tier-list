@@ -1,4 +1,12 @@
-body, html, h1, h2, h3, p {
+@use './typography.scss';
+
+body, html, h2, h3, p {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'SmashFont', sans-serif;
     margin: 0;
 }
 

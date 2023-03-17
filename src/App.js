@@ -1,12 +1,10 @@
-import Header from './Components/Header/Header';
-import TiersSection from './Components/TiersSection/TiersSection';
+import Homepage from './pages/Homepage/Homepage'
 import './App.css'
 
 function App() {
   return (
     <>
-      <Header />
-      <TiersSection />
+      <Homepage />
     </>
   );
 }
