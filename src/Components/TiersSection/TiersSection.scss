@@ -2,8 +2,13 @@
 @use '../../styles/variables.scss';
 
 .tiers {
+    background-image: url('../../assets/images/background.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    padding: 1rem;
     gap: 1rem;
+    width: 100%;
 }

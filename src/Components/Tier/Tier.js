@@ -1,5 +1,8 @@
 import './Tier.scss';
 import Row from '../Row/Row';
+import plusIcon from '../../assets/images/plus.png';
+import minusIcon from '../../assets/images/minus.png';
+import neutralIcon from '../../assets/images/full-stop.png';
 
 function Tier({name, ranking, styling1, styling2}) {
 
@@ -13,19 +16,19 @@ function Tier({name, ranking, styling1, styling2}) {
                     <div className='tiers__subranking-container'>
                         <div className='tiers__subranking-row-container'>
                             <div className={styling2}>
-                                +
+                                <img className='tiers__subranking-icon' src={plusIcon} alt='plus icon' />
                             </div>
                             <Row name='S+' />
                         </div>
                         <div className='tiers__subranking-row-container'>
                             <div className={styling2}>
-                                o
+                                <img className='tiers__subranking-icon--neutral' src={neutralIcon} alt='neutral icon' />
                             </div>
                             <Row name='S' />
                         </div>
                         <div className='tiers__subranking-row-container'>
                             <div className={styling2}>
-                                -
+                                <img className='tiers__subranking-icon' src={minusIcon} alt='minus icon' />
                             </div>
                             <Row name='S-' />
                         </div>
@@ -45,13 +48,13 @@ function Tier({name, ranking, styling1, styling2}) {
                     <div className='tiers__subranking-container'>
                         <div className='tiers__subranking-row-container'>
                             <div className={styling2}>
-                                +
+                                <img className='tiers__subranking-icon' src={plusIcon} alt='plus icon' />
                             </div>
                             <Row name={`${ranking}+`} />
                         </div>
                         <div className='tiers__subranking-row-container'>
                             <div className={styling2}>
-                                -
+                                <img className='tiers__subranking-icon' src={minusIcon} alt='minus icon' />
                             </div>
                             <Row name={`${ranking}-`} />
                         </div>

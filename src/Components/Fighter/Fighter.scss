@@ -1,0 +1,96 @@
+@use '../../styles/resets.scss';
+@use '../../styles/variables.scss' as*;
+
+.fighter-S {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $s-tier;
+
+    &:hover {
+        outline: 5px solid white;
+    }
+
+    // &:selected {
+    //     outline: 5px solid white;
+    // }
+
+    &__icon {
+        height: 2.5rem;
+    }
+}
+
+.fighter-A {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $a-tier;
+
+    &:hover {
+        outline: 5px solid white;
+    }
+
+    &__icon {
+        height: 2.5rem;
+    }
+}
+
+.fighter-B {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $b-tier;
+
+    &:hover {
+        outline: 5px solid white;
+    }
+
+    &__icon {
+        height: 2.5rem;
+    }
+}
+
+.fighter-C {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $c-tier;
+
+    &:hover {
+        outline: 5px solid white;
+    }
+
+    &__icon {
+        height: 2.5rem;
+    }
+}
+
+.fighter-D {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $d-tier;
+
+    &:hover {
+        outline: 5px solid white;
+    }
+
+    &__icon {
+        height: 2.5rem;
+    }
+}
