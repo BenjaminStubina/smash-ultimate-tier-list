@@ -1,0 +1,134 @@
+@use '../../styles/resets.scss';
+@use '../../styles/variables.scss' as *;
+
+.tiers {
+    &__wrapper {
+        display: flex;
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__ranking-S {
+        display: flex;
+        background-color: $s-tier;
+        padding: 1rem 0.5rem;
+        font-size: 4rem;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+    }
+
+    &__ranking-A {
+        display: flex;
+        background-color: $a-tier;
+        padding: 1rem 0.5rem;
+        font-size: 4rem;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+    }
+
+    &__ranking-B {
+        display: flex;
+        background-color: $b-tier;
+        padding: 1rem 0.5rem;
+        font-size: 4rem;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+    }
+
+     &__ranking-C {
+        display: flex;
+        background-color: $c-tier;
+        padding: 1rem 0.5rem;
+        font-size: 4rem;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+    }
+
+     &__ranking-D {
+        display: flex;
+        background-color: $d-tier;
+        padding: 1rem 0.5rem;
+        font-size: 4rem;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+    }
+
+    &__subranking-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 0.15rem;
+        margin-left: .15rem;
+    }
+
+    &__subranking-row-container {
+        display: flex;
+    }
+
+    &__subranking-S {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;;
+        padding: 0.5rem;
+        width: 2rem;
+        margin-right: 0.5rem;
+        background-color: $s-tier;
+    }
+
+    &__subranking-A {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;;
+        padding: 0.5rem;
+        width: 2rem;
+        margin-right: 0.5rem;
+        background-color: $a-tier;
+    }
+
+    &__subranking-B {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;;
+        padding: 0.5rem;
+        width: 2rem;
+        margin-right: 0.5rem;
+        background-color: $b-tier;
+    }
+
+    &__subranking-C {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;;
+        padding: 0.5rem;
+        width: 2rem;
+        margin-right: 0.5rem;
+        background-color: $c-tier;
+    }
+
+    &__subranking-D {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;;
+        padding: 0.5rem;
+        width: 2rem;
+        margin-right: 0.5rem;
+        background-color: $d-tier;
+    }
+
+    &__row {
+        background-color: blue;
+
+    }
+}
