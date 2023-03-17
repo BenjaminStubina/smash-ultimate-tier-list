@@ -1,14 +1,22 @@
 import './Row.scss';
 import Fighter from '../Fighter/Fighter';
 
-function Row({name}) {
+function Row({fighters, name, setSelectedFighter}) {
+
+    if(!fighters) {
+        return (
+            <h1>Loading Characters!</h1>
+        )
+    }
 
     if (name === 'S+') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='S' />
-                <Fighter name='Fox' ranking='S' />
-                <Fighter name='GW' ranking='S' />
+                {fighters[0].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='S' />
+                    )
+                })}
             </div>
         )
     }
@@ -16,45 +24,36 @@ function Row({name}) {
     else if (name === 'S') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='S' />
-                <Fighter name='Fox' ranking='S' />
-                <Fighter name='GW' ranking='S' />
-                <Fighter name='Diddy' ranking='S' />
-                <Fighter name='Fox' ranking='S' />
-                <Fighter name='GW' ranking='S' />
-            </div> 
+                {fighters[1].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='S' />
+                    )
+                })}
+            </div>
         )
     }
 
     else if (name === 'S-') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='S' />
-                <Fighter name='Fox' ranking='S' />
-                <Fighter name='GW' ranking='S' />
-                <Fighter name='Diddy' ranking='S' />
-                <Fighter name='Fox' ranking='S' />
-                <Fighter name='GW' ranking='S' />
-                <Fighter name='GW' ranking='S' />
-                <Fighter name='Diddy' ranking='S' />
-                <Fighter name='Fox' ranking='S' />
-                <Fighter name='GW' ranking='S' />
-            </div> 
+                {fighters[2].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='S' />
+                    )
+                })}
+            </div>
         )
     }
 
     else if (name === 'A+') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='A' />
-                <Fighter name='Fox' ranking='A' />
-                <Fighter name='GW' ranking='A' />
-                <Fighter name='Diddy' ranking='A' />
-                <Fighter name='Fox' ranking='A' />
-                <Fighter name='GW' ranking='A' />
-                <Fighter name='GW' ranking='A' />
-                <Fighter name='Diddy' ranking='A' />
-            </div> 
+                {fighters[3].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='A' />
+                    )
+                })}
+            </div>
         )
     }
 
@@ -62,118 +61,84 @@ function Row({name}) {
     else if (name === 'A-') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='A' />
-                <Fighter name='Fox' ranking='A' />
-                <Fighter name='GW' ranking='A' />
-                <Fighter name='Diddy' ranking='A' />
-                <Fighter name='Fox' ranking='A' />
-                <Fighter name='GW' ranking='A' />
-                <Fighter name='GW' ranking='A' />
-                <Fighter name='Diddy' ranking='A' />
-                <Fighter name='GW' ranking='A' />
-                <Fighter name='GW' ranking='A' />
-                <Fighter name='Diddy' ranking='A' />
-            </div> 
+                {fighters[4].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='A' />
+                    )
+                })}
+            </div>
         )
     }
 
     else if (name === 'B+') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='B' />
-                <Fighter name='Fox' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-                <Fighter name='Diddy' ranking='B' />
-                <Fighter name='Fox' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-                <Fighter name='Diddy' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-            </div> 
+                {fighters[5].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='B' />
+                    )
+                })}
+            </div>
         )
     }
 
         else if (name === 'B-') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='B' />
-                <Fighter name='Fox' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-                <Fighter name='Diddy' ranking='B' />
-                <Fighter name='Fox' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-                <Fighter name='Diddy' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-                <Fighter name='GW' ranking='B' />
-                <Fighter name='Diddy' ranking='B' />
-            </div> 
+                {fighters[6].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='B' />
+                    )
+                })}
+            </div>
         )
     }
 
     else if (name === 'C+') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='C' />
-                <Fighter name='Fox' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-                <Fighter name='Diddy' ranking='C' />
-                <Fighter name='Fox' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-                <Fighter name='Diddy' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-            </div> 
+                {fighters[7].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='C' />
+                    )
+                })}
+            </div>
         )
     }
 
         else if (name === 'C-') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='C' />
-                <Fighter name='Fox' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-                <Fighter name='Diddy' ranking='C' />
-                <Fighter name='Fox' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-                <Fighter name='Diddy' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-                <Fighter name='GW' ranking='C' />
-            </div> 
+                {fighters[8].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='C' />
+                    )
+                })}
+            </div>
         )
     }
 
         else if (name === 'D+') {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='D' />
-                <Fighter name='Fox' ranking='D' />
-                <Fighter name='GW' ranking='D' />
-                <Fighter name='Diddy' ranking='D' />
-                <Fighter name='Fox' ranking='D' />
-                <Fighter name='GW' ranking='D' />
-                <Fighter name='GW' ranking='D' />
-                <Fighter name='Diddy' ranking='D' />
-                <Fighter name='GW' ranking='D' />
-                <Fighter name='GW' ranking='D' />
-            </div> 
+                {fighters[9].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='D' />
+                    )
+                })}
+            </div>
         )
     }
 
     else {
         return (
             <div className='row'>
-                <Fighter name='Diddy' ranking='D' />
-                <Fighter name='Fox' ranking='D' />
-                <Fighter name='GW' ranking='D' />
-                <Fighter name='Diddy' ranking='D' />
-                <Fighter name='Fox' ranking='D' />
-                <Fighter name='GW' ranking='D' />
-                <Fighter name='GW' ranking='D' />
-                <Fighter name='Diddy' ranking='D' />
-            </div> 
+                {fighters[10].map((fighter) => {
+                    return (
+                        <Fighter tierName={name} setSelectedFighter={setSelectedFighter} name={fighter.name} icon={fighter.image} ranking='D' />
+                    )
+                })}
+            </div>
         )
     }
 }

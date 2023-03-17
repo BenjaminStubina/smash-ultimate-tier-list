@@ -1,34 +1,32 @@
 import './FighterCard.scss';
-import Diddy from '../../assets/images/DiddyKongHeadSSBUWebsite.webp';
 
-function FighterCard() {
-
-    let selectedFighter = "";
+function FighterCard({fighterInfo, selectedFighter}) {
 
     // state needs to change depending on the selected fighter
     // when no fighter is selected (on page startup) should display empty card
 
-    if (!selectedFighter) {
+    if (fighterInfo) {
         return (
             <>
-                {/* NOTHING (SHOULD BE EMPTY) */}
-                {/* USING PLACE HOLDER FOR STYLING */}
                 <article className='fighter-card'>
-                    <img className='fighter-card__portrait' src={Diddy} alt='Diddy Portrait' />
+                    <img className='fighter-card__portrait' src={selectedFighter.icon} alt='Diddy Portrait' />
                     <h2 className='fighter-card__ranking'>
-                        S+
+                        {selectedFighter.tierName}
                     </h2>
                     <h3 className='fighter-card__name'>
-                        Diddy Kong
+                        {selectedFighter.name}
                     </h3>
                     <p className='fighter-card__moves'>
-                        Move Set: Move 1, Move 2, Move 3, etc...
+                        Availability: {fighterInfo[0].availability}
                     </p>
                     <p className='fighter-card__universe'>
-                        Universe: Donkey Kong
+                        Universe: {fighterInfo[0].series.name}
                     </p>
                     <p className='fighter-card__debut-year'>
-                        Debut Year: 2023
+                        Previous Games: 
+                        {fighterInfo[0].alsoAppearsIn.map((game) => {
+                            return " "+game
+                        })}
                     </p>
                 </article>
             </>
@@ -38,7 +36,7 @@ function FighterCard() {
     else {
         return (
             <>
-                {/* FIGHTER CARD */}
+                {/* NOTHING (SHOULD BE EMPTY) */}
             </>
         )
     }
